@@ -1,0 +1,29 @@
+- alias: An hour before sunset, if Jon is home, turn on the lights partway
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-01:00:00"
+  condition:
+    condition: state
+    entity_id: device_tracker.android35c8c2f967f471d0home
+    state: home
+  action:
+    service: homeassistant.turn_on
+    entity_id: group.main_lights
+    data:
+      brightness: 150
+- alias: When the sun sets, if Jon is home, turn on the lights
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:15:00"
+  condition:
+    condition: state
+    entity_id: device_tracker.android35c8c2f967f471d0home
+    state: home
+  action:
+    service: homeassistant.turn_on
+    entity_id: group.main_lights
+    data:
+      brightness: 250
+

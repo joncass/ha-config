@@ -1,0 +1,71 @@
+default_view:
+  view: yes
+  entities:
+    - updater.updater
+    - device_tracker.android35c8c2f967f471d0home
+    - group.bedroom_lights
+    - group.living_room_lights
+    - group.kitchen_lights
+
+bedroom_lights:
+  name: Bedroom lights
+  icon: mdi:lightbulb-outline
+  entities:
+    - light.linear_lb60z1_dimmable_led_light_bulb_level_5_0
+    - light.linear_lb60z1_dimmable_led_light_bulb_level_6_0
+    
+living_room_lights:
+  name: Living room lights
+  icon: mdi:lightbulb-outline
+  entities:
+    - light.linear_lb60z1_dimmable_led_light_bulb_level_2_0
+    - light.linear_lb60z1_dimmable_led_light_bulb_level_3_0
+
+kitchen_lights:
+  name: Kitchen lights
+  icon: mdi:lightbulb-outline
+  entities:
+    - light.ge_12724_3way_dimmer_switch_level_4_0
+
+main_lights:
+  name: Main lights
+  icon: mdi:lightbulb-outline
+  entities:
+    - group.living_room_lights
+    - group.kitchen_lights
+    
+lights:
+  name: Lights
+  view: yes
+  icon: mdi:lightbulb-outline
+  entities:
+    - group.bedroom_lights
+    - group.living_room_lights
+    - group.kitchen_lights
+
+climate:
+  name: Climate
+  entities:
+    - climate.living_room
+    - binary_sensor.living_room_thermostat_online
+
+house:
+  name: House
+  view: yes
+  icon: mdi:home-outline
+  entities:
+    - group.climate
+
+media:
+  name: Media
+  view: yes
+  icon: mdi:play-circle-outline
+  entities:
+    - media_player.living_room_home
+    - media_player.tv
+
+offable:
+  name: Offable
+  entities:
+    - group.media
+    - group.lights

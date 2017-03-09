@@ -1,0 +1,13 @@
+usb_path: /dev/ttyACM1
+autoheal: false
+customize:
+  light.linear_lb60z1_dimmable_led_light_bulb_level_2_0:
+    refresh_value: true
+  light.linear_lb60z1_dimmable_led_light_bulb_level_3_0:
+    refresh_value: true
+  light.ge_12724_3way_dimmer_switch_level_4_0:
+    refresh_value: true
+  light.linear_lb60z1_dimmable_led_light_bulb_level_5_0:
+    refresh_value: true
+  light.linear_lb60z1_dimmable_led_light_bulb_level_6_0:
+    refresh_value: true

@@ -6,6 +6,7 @@ default_view:
     - group.bedroom_lights
     - group.living_room_lights
     - group.kitchen_lights
+    - group.weather
 
 bedroom_lights:
   name: Bedroom lights
@@ -48,6 +49,13 @@ climate:
   entities:
     - climate.living_room
     - binary_sensor.living_room_thermostat_online
+
+weather:
+  name: Weather
+  entities:
+    - sun.sun
+    - sensor.yr_symbol
+    - sensor.yr_temperature
 
 house:
   name: House

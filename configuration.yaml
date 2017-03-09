@@ -16,6 +16,7 @@ homeassistant:
 group: !include config/groups.yaml
 automation: !include config/automation.yaml
 zwave: !include config/zwave.yaml
+sensor: !include config/sensor.yaml
 
 # Enables the frontend
 frontend:
@@ -40,10 +41,6 @@ logbook:
 
 # Track the sun
 sun:
-
-# Weather Prediction
-sensor:
-  platform: yr
 
 # Text to speech
 tts:

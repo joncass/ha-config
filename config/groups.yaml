@@ -2,7 +2,6 @@ default_view:
   view: yes
   entities:
     - updater.updater
-    - device_tracker.android35c8c2f967f471d0home
     - group.bedroom_lights
     - group.living_room_lights
     - group.kitchen_lights

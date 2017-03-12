@@ -14,7 +14,7 @@ homeassistant:
   customize: !include config/customize.yaml
 
 group: !include config/groups.yaml
-automation: !include config/automation.yaml
+#automation: !include config/automation.yaml
 zwave: !include config/zwave.yaml
 sensor: !include config/sensor.yaml
 
@@ -50,8 +50,3 @@ nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 
-device_tracker:
-  - platform: nmap_tracker
-    consider_home: 1800
-    hosts:
-      - 192.168.1.15

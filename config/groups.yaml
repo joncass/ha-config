@@ -1,28 +1,42 @@
 default_view:
   view: yes
   entities:
+    - group.upstairs_lights
+    - group.downstairs_lights
+    - group.climate
+    - group.weather
+    - group.media
+
+upstairs_lights:
+  name: Upstairs lights
+  icon: mdi:lightbulb
+  entities:
     - group.bedroom_lights
+
+downstairs_lights:
+  name: Downstairs lights
+  icon: mdi:lightbulb
+  entities:
     - group.living_room_lights
     - group.kitchen_lights
-    - group.weather
 
 bedroom_lights:
-  name: Bedroom lights
-  icon: mdi:lightbulb-outline
+  name: Bedroom
+  icon: mdi:lightbulb
   entities:
     - light.linear_lb60z1_dimmable_led_light_bulb_level_5_0
     - light.linear_lb60z1_dimmable_led_light_bulb_level_6_0
     
 living_room_lights:
-  name: Living room lights
-  icon: mdi:lightbulb-outline
+  name: Living room
+  icon: mdi:lightbulb
   entities:
     - light.linear_lb60z1_dimmable_led_light_bulb_level_2_0
     - light.linear_lb60z1_dimmable_led_light_bulb_level_3_0
 
 kitchen_lights:
-  name: Kitchen lights
-  icon: mdi:lightbulb-outline
+  name: Kitchen
+  icon: mdi:lightbulb
   entities:
     - light.ge_12724_3way_dimmer_switch_level_4_0
 
@@ -35,7 +49,6 @@ main_lights:
     
 lights:
   name: Lights
-  view: yes
   icon: mdi:lightbulb-outline
   entities:
     - group.bedroom_lights
@@ -55,17 +68,8 @@ weather:
     - sensor.yr_symbol
     - sensor.yr_temperature
 
-house:
-  name: House
-  view: yes
-  icon: mdi:home-outline
-  entities:
-    - group.climate
-
 media:
   name: Media
-  view: yes
-  icon: mdi:play-circle-outline
   entities:
     - media_player.living_room_home
     - media_player.tv

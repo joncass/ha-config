@@ -72,6 +72,7 @@ media:
   name: Media
   entities:
     - media_player.living_room_home
+    - media_player.bedroom_home
     - media_player.tv
 
 offable:

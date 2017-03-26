@@ -5,7 +5,6 @@ default_view:
     - group.downstairs_lights
     - group.climate
     - group.weather
-    - group.media
 
 upstairs_lights:
   name: Upstairs lights
@@ -70,10 +69,12 @@ weather:
 
 media:
   name: Media
+  view: yes
   entities:
-    - media_player.living_room_home
-    - media_player.bedroom_home
     - media_player.tv
+    - media_player.downstairs_devices
+    - media_player.bedroom_home
+    - media_player.all_devices
 
 offable:
   name: Offable
